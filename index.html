@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BakedWithLove by Muskan — Premium Custom Cakes in Sambalpur</title>
+  <meta name="description"
+    content="BakedWithLove by Muskan — Premium handcrafted custom cakes in Badabazar, Sambalpur. Order fresh, eggless, and celebration cakes made with love." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ====================================================
+       ADMIN AVAILABILITY BANNER (hidden by default)
+       ==================================================== -->
+  <div id="adminBanner" class="admin-banner" role="alert" style="display:none;">
+    ⚠️ <strong>Orders Temporarily Paused</strong> — We'll be back very soon! Browse our menu in the meantime.
+  </div>
+
+  <!-- FLOATING BACKGROUND ANIMATION — subtle, centered behind content -->
+  <div class="bg-float-layer" aria-hidden="true">
+    <span class="bg-float-el" style="left:22%; bottom:-8%; --dur:20s; --delay:0s;">🎂</span>
+    <span class="bg-float-el" style="left:35%; bottom:-8%; --dur:24s; --delay:4s;">🌸</span>
+    <span class="bg-float-el" style="left:48%; bottom:-8%; --dur:18s; --delay:8s;">🎀</span>
+    <span class="bg-float-el" style="left:58%; bottom:-8%; --dur:22s; --delay:2s;">🧁</span>
+    <span class="bg-float-el" style="left:70%; bottom:-8%; --dur:19s; --delay:6s;">🍓</span>
+    <span class="bg-float-el" style="left:28%; bottom:-8%; --dur:25s; --delay:10s;">🌹</span>
+    <span class="bg-float-el" style="left:42%; bottom:-8%; --dur:21s; --delay:1s;">✨</span>
+    <span class="bg-float-el" style="left:55%; bottom:-8%; --dur:23s; --delay:5s;">🍮</span>
+    <span class="bg-float-el" style="left:66%; bottom:-8%; --dur:17s; --delay:9s;">🍍</span>
+    <span class="bg-float-el" style="left:38%; bottom:-8%; --dur:26s; --delay:3s;">🍫</span>
+  </div>
+
+  <!-- PAGE LOADER -->
+
+  <div id="loader" role="status" aria-label="Loading">
+    <div class="loader-logo">BakedWithLove <span>by</span> Muskan</div>
+    <div class="loader-dots">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo" aria-label="BakedWithLove by Muskan Home">
+      BakedWithLove <span>by</span> Muskan
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li>
+        <a href="cart.html" class="cart-btn" aria-label="View cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <path d="M16 10a4 4 0 01-8 0" />
+          </svg>
+          <span class="cart-count" aria-live="polite">0</span>
+        </a>
+      </li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <a href="cart.html" class="cart-btn" aria-label="View cart" style="display:none;" id="mobileCartBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <path d="M16 10a4 4 0 01-8 0" />
+        </svg>
+        <span class="cart-count" aria-live="polite">0</span>
+      </a>
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html">Cart 🛒</a>
+  </div>
+
+  <main>
+    <!-- ====================================================
+         HERO SECTION
+         ==================================================== -->
+    <section class="hero" id="home" aria-label="Hero section">
+      <div class="hero-content">
+        <div class="hero-badge">Artisan Bakery Since 2024</div>
+        <h1>Baked with <em>Love,</em><br>Served with Sweetness</h1>
+        <p class="hero-sub">Every slice tells a story of passion, creativity, and the purest ingredients. Let us make
+          your special moments even sweeter!</p>
+        <div class="hero-cta-row">
+          <a href="#cakes" class="btn-primary">
+            Order Now
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="customize.html" class="btn-customize">🎨 Customize Cake</a>
+          <button onclick="openBulkModal()" class="btn-bulk">🏢 Bulk Orders</button>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <strong><span data-count="500" data-suffix="+">0+</span></strong>
+            <span>Happy Customers</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="hero-stat">
+            <strong><span data-count="14" data-suffix="+">0+</span></strong>
+            <span>Cake Varieties</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="hero-stat">
+            <strong><span data-count="1" data-suffix=" yr">0 yr</span></strong>
+            <span>Of Craftsmanship</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="cake-float">
+          <div class="cake-emoji">🎂</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         CAKES SECTION
+         ==================================================== -->
+    <section class="cakes-section" id="cakes" aria-labelledby="cakes-heading">
+      <div class="section-header reveal">
+        <div class="section-header-text">
+          <div class="section-tag">Our Delicious Flavours</div>
+          <h2 class="section-title" id="cakes-heading">Crafted for Every<br>Sweet Occasion</h2>
+        </div>
+        <p class="section-sub">Fresh, handcrafted cakes made with love for every occasion — from birthdays to weddings
+          and everything in between.</p>
+      </div>
+
+      <!-- FILTER BAR -->
+      <div class="filter-bar reveal" id="filterBar" role="toolbar" aria-label="Filter cakes by category">
+        <div class="filter-pills">
+          <button class="filter-pill active" data-filter="all">🎂 All</button>
+          <button class="filter-pill" data-filter="veg">🟢 Veg</button>
+          <button class="filter-pill" data-filter="eggless">🌿 Eggless</button>
+          <button class="filter-pill" data-filter="wedding">💍 Wedding</button>
+          <button class="filter-pill" data-filter="birthday">🎉 Birthday</button>
+          <button class="filter-pill" data-filter="fusion">🍮 Fusion</button>
+          <button class="filter-pill" data-filter="bulk">🏢 Bulk/Corporate</button>
+        </div>
+        <div class="filter-price-wrap">
+          <label for="priceRange" class="filter-price-label">Max: <span id="priceRangeVal">₹900</span></label>
+          <input type="range" id="priceRange" min="500" max="900" step="50" value="900" class="price-slider"
+            aria-label="Maximum price filter">
+        </div>
+      </div>
+
+      <div class="cakes-grid reveal-stagger" id="cakesGrid" role="list" aria-label="Cake menu">
+        <!-- Rendered by script.js -->
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ====================================================
+         WHY CHOOSE US
+         ==================================================== -->
+    <section class="why-section" aria-labelledby="why-heading">
+      <div class="section-tag reveal">Why BakedWithLove</div>
+      <h2 class="section-title reveal" id="why-heading">Crafted with Intention,<br>Delivered with Heart</h2>
+
+      <div class="why-grid reveal-stagger">
+        <div class="why-card">
+          <span class="why-icon">🌸</span>
+          <h3>Eggless Options Available</h3>
+          <p>We offer a wide range of eggless cakes without compromising on taste — because everyone deserves the
+            perfect slice.</p>
+        </div>
+        <div class="why-card">
+          <span class="why-icon">🎨</span>
+          <h3>Custom Designs</h3>
+          <p>Have a unique idea in mind? We bring your vision to life — from theme cakes to personalised birthday
+            masterpieces.</p>
+        </div>
+        <div class="why-card">
+          <span class="why-icon">🚚</span>
+          <h3>Fresh & Made to Order</h3>
+          <p>Every cake is baked fresh on the day of your order. No frozen stock, no compromise — always fresh from our
+            kitchen.</p>
+        </div>
+        <div class="why-card">
+          <span class="why-icon">💯</span>
+          <h3>Happiness Guarantee</h3>
+          <p>Not in love with your cake? We'll make it right — no questions asked. Your celebration deserves nothing
+            less than perfect.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ====================================================
+         TESTIMONIALS
+         ==================================================== -->
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" aria-labelledby="reviews-heading">
+      <div class="section-tag reveal">Love Notes</div>
+      <h2 class="section-title reveal" id="reviews-heading">What Our Customers Say</h2>
+      <div class="testimonials-grid reveal-stagger">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"The Black Forest cake was absolutely divine! Fresh cream, perfect sponge, and beautiful
+            presentation. Highly recommend!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar">👩</div>
+            <div class="testi-info"><strong>Sneha Patel</strong><span>Birthday Celebration</span></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Ordered a custom cake for my daughter's birthday. Muskan's attention to detail is
+            amazing! The kids absolutely loved it."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">👨</div>
+            <div class="testi-info"><strong>Rahul Sharma</strong><span>Custom Cake Order</span></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Best eggless cakes in Sambalpur! The Pineapple Cake was so moist and flavorful. Will
+            definitely order again!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar">👩</div>
+            <div class="testi-info"><strong>Priya Mishra</strong><span>Regular Customer</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ====================================================
+         CUSTOMER FEEDBACK SECTION
+         ==================================================== -->
+    <section class="feedback-section reveal" id="feedbackSection" aria-labelledby="feedback-heading">
+      <div class="section-tag">Your Voice</div>
+      <h2 class="section-title" id="feedback-heading">Share Your Experience</h2>
+      <p class="section-sub">Loved your cake? Tell us! Your feedback helps us bake better every day. 🎂</p>
+
+      <div id="userReviewsList" class="testimonials-grid" style="margin-top:36px;"></div>
+
+      <div style="text-align:center;margin-top:32px;">
+        <button id="toggleFeedbackBtn" class="btn-toggle-feedback">✍️ Write a Review</button>
+      </div>
+
+      <div id="feedbackFormWrap" class="feedback-form-wrap">
+        <form id="feedbackForm" class="feedback-form" novalidate>
+          <div class="form-group">
+            <label for="reviewName">Your Name *</label>
+            <input type="text" id="reviewName" name="reviewName" placeholder="e.g. Priya Sharma" required
+              maxlength="60">
+          </div>
+          <div class="form-group">
+            <label>Rating *</label>
+            <div class="star-rating-input" role="group" aria-label="Rate your experience">
+              <button type="button" class="star-input" data-val="1" aria-label="1 star">★</button>
+              <button type="button" class="star-input" data-val="2" aria-label="2 stars">★</button>
+              <button type="button" class="star-input" data-val="3" aria-label="3 stars">★</button>
+              <button type="button" class="star-input" data-val="4" aria-label="4 stars">★</button>
+              <button type="button" class="star-input" data-val="5" aria-label="5 stars">★</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="reviewText">Your Review *</label>
+            <textarea id="reviewText" name="reviewText" rows="4" placeholder="Tell us about your experience..." required
+              maxlength="400"></textarea>
+          </div>
+          <button type="submit" class="btn-submit-review">Submit Review ✨</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================
+       INSTAGRAM GALLERY SECTION
+       ==================================================== -->
+  <section class="ig-section reveal" id="instagramSection" aria-labelledby="ig-heading">
+    <div class="ig-header">
+      <div class="section-tag">Find Us Online</div>
+      <h2 class="section-title" id="ig-heading">Follow Us on Instagram</h2>
+      <a class="ig-handle" href="https://instagram.com/bakedwithlove_by_muskan" target="_blank" rel="noopener">
+        <svg class="ig-logo-inline" viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
+          <path
+            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+        </svg>
+        @bakedwithlove_by_muskan
+      </a>
+    </div>
+
+    <div class="ig-grid">
+      <a class="ig-photo" href="https://instagram.com/bakedwithlove_by_muskan" target="_blank" rel="noopener"
+        aria-label="View on Instagram">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=400&fit=crop"
+          alt="Chocolate Cake" loading="lazy">
+        <div class="ig-overlay">
+          <svg class="ig-overlay-icon" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+          </svg>
+          <span>View on Instagram</span>
+        </div>
+      </a>
+      <a class="ig-photo" href="https://instagram.com/bakedwithlove_by_muskan" target="_blank" rel="noopener"
+        aria-label="View on Instagram">
+        <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=400&h=400&fit=crop" alt="Birthday Cake"
+          loading="lazy">
+        <div class="ig-overlay">
+          <svg class="ig-overlay-icon" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+          </svg>
+          <span>View on Instagram</span>
+        </div>
+      </a>
+      <a class="ig-photo" href="https://instagram.com/bakedwithlove_by_muskan" target="_blank" rel="noopener"
+        aria-label="View on Instagram">
+        <img src="https://images.unsplash.com/photo-1586788680434-30d324b2d46f?w=400&h=400&fit=crop"
+          alt="Red Velvet Cake" loading="lazy">
+        <div class="ig-overlay">
+          <svg class="ig-overlay-icon" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+          </svg>
+          <span>View on Instagram</span>
+        </div>
+      </a>
+      <a class="ig-photo" href="https://instagram.com/bakedwithlove_by_muskan" target="_blank" rel="noopener"
+        aria-label="View on Instagram">
+        <img src="https://images.unsplash.com/photo-1557925923-cd4648e211a0?w=400&h=400&fit=crop"
+          alt="Double Chocolate Cake" loading="lazy">
+        <div class="ig-overlay">
+          <svg class="ig-overlay-icon" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+          </svg>
+          <span>View on Instagram</span>
+        </div>
+      </a>
+    </div>
+
+    <div style="text-align:center;margin-top:32px;">
+      <a href="https://instagram.com/bakedwithlove_by_muskan" target="_blank" rel="noopener" class="btn-ig-follow">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+          <path
+            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+        </svg>
+        Follow Us
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">BakedWithLove <span style="color:var(--blush);">by</span> Muskan</div>
+        <p>Handcrafted cakes for life's sweetest moments. Made fresh with love in Badabazar, Sambalpur — delivered to
+          your door.</p>
+        <div class="footer-social" aria-label="Social media links">
+          <a class="social-icon" href="https://instagram.com/bakedwithlove_by_muskan" aria-label="Instagram"
+            target="_blank" rel="noopener">📷</a>
+          <a class="social-icon" href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener">📘</a>
+          <a class="social-icon" href="https://wa.me/91XXXXXXXXXX" aria-label="WhatsApp" target="_blank"
+            rel="noopener">💬</a>
+        </div>
+      </div>
+      <nav class="footer-col" aria-label="Quick links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="index.html#cakes">Our Cakes</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html">Cart</a>
+      </nav>
+      <div class="footer-col">
+        <h4>Our Cakes</h4>
+        <li>Birthday Cakes</li>
+        <li>Wedding Cakes</li>
+        <li>Custom Designs</li>
+        <li>Eggless Cakes</li>
+        <li>Fusion Cakes</li>
+      </div>
+      <address class="footer-col" style="font-style:normal;">
+        <h4>Get In Touch</h4>
+        <a href="tel:+91XXXXXXXXXX">📞 +91 XXXXX XXXXX</a>
+        <a href="mailto:bakedwithlove@gmail.com">✉️ bakedwithlove@gmail.com</a>
+        <li>🕒 Mon–Sat: 9am – 8pm</li>
+        <li>🕒 Sunday: 10am – 6pm</li>
+        <li>📍 Badabazar, Sambalpur, Odisha</li>
+      </address>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 BakedWithLove by Muskan. All rights reserved. Made with ❤️ in Sambalpur.</p>
+      <p><a href="#">Privacy Policy</a> · <a href="#">Terms</a></p>
+    </div>
+  </footer>
+
+  <!-- ====================================================
+       BULK / CORPORATE ORDER MODAL
+       ==================================================== -->
+  <div class="bulk-overlay" id="bulkModal" role="dialog" aria-modal="true" aria-labelledby="bulkModalTitle">
+    <div class="bulk-modal">
+      <button class="bulk-close-btn" onclick="closeBulkModal()" aria-label="Close">✕</button>
+      <div class="bulk-modal-header">
+        <div style="font-size:2.5rem;">🏢</div>
+        <h2 id="bulkModalTitle">Bulk & Corporate Orders</h2>
+        <p>Planning an event? We handle large orders with the same love and quality. Get in touch!</p>
+      </div>
+      <form id="bulkOrderForm" class="bulk-form" novalidate>
+        <div class="bulk-form-grid">
+          <div class="form-group">
+            <label for="eventName">Event Name</label>
+            <input type="text" id="eventName" name="eventName" placeholder="e.g. Annual Day, Wedding" maxlength="80">
+          </div>
+          <div class="form-group">
+            <label for="quantity">Number of Cakes *</label>
+            <input type="number" id="quantity" name="quantity" placeholder="e.g. 10" min="2" required>
+          </div>
+          <div class="form-group">
+            <label for="eventDate">Event Date *</label>
+            <input type="date" id="eventDate" name="eventDate" required>
+          </div>
+          <div class="form-group">
+            <label for="contactName">Your Name *</label>
+            <input type="text" id="contactName" name="contactName" placeholder="Full Name" required maxlength="60">
+          </div>
+          <div class="form-group" style="grid-column:1/-1;">
+            <label for="contactPhone">Phone Number *</label>
+            <input type="tel" id="contactPhone" name="contactPhone" placeholder="+91 XXXXX XXXXX" required
+              maxlength="15">
+          </div>
+          <div class="form-group" style="grid-column:1/-1;">
+            <label for="notes">Additional Notes</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Flavours, theme, dietary requirements..."
+              maxlength="300"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn-bulk-submit">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          Send Request via WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
